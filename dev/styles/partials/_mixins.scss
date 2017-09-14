@@ -1,0 +1,39 @@
+//mixin for media queries
+// @include respond-to("small") {}
+@mixin respond-to($breakpoint) {
+	@if $breakpoint == "small" {
+		@media (max-width: 655px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint == "medium" {
+		@media (max-width: 800px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint = "large" {
+		@media (max-width: 1000px) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint = "xlarge" {
+		@media (max-width: 1500px) {
+			@content;
+		}
+	}
+
+	@else {
+		@media ($breakpoint) {
+			@content;
+		}
+	}
+}
+
+// converts pizel font sizes into rems 
+@mixin fontSize($sizeValue){
+	font-size: $sizeValue * 1px;
+	font-size: ($sizeValue/10) * 1em;
+}

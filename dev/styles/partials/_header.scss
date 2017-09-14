@@ -1,0 +1,60 @@
+header {
+	@include fontSize(14);
+	height: 100vh;
+	nav {
+		padding-top: 58px;
+		ul {
+			display: flex;
+			list-style: none;
+			padding-left: 3%;
+		}
+		li {
+			padding-right: 40px;
+		}
+		.nav__selected {
+			font-weight: 700;
+		}
+	}
+}
+
+.header__blurb {
+	h1 {
+		padding-top: 159px;
+		padding-bottom: 16px;
+		color: $headergrey;
+		@include fontSize(30);
+		font-weight: 700;
+	}
+	h2 {
+		font-family: 'Libre Baskerville', serif;
+		@include fontSize(16);
+		padding-bottom: 33px;
+		font-style: italic;
+		font-weight: 400;
+		color: $headergrey;
+	}
+	p {
+		line-height: 24px;
+	}
+	.header__resume_blurb, .header__contact_blurb {
+		line-height: 30px;
+		a {
+			color: $headergrey;
+			@include fontSize(12);
+			font-weight: 500;
+			padding-left: 11px;
+			text-transform: uppercase;
+		}
+		i {
+			padding-left: 11px;
+			color: $headergrey;
+			font-size: 30px; 
+		}
+	}
+	.header__resume_blurb {
+		padding-top: 37px;
+	}
+	.header__contact_blurb {
+		padding-bottom: 55px;
+	}
+}
