@@ -1,7 +1,15 @@
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const concat = require('gulp-concat');
-const babel = require('gulp-babel')
+const babel = require('babelify')
+const browserSync = require('browser-sync');
+const reload = browserSync.reload;
+const browserify = require('browserify');
+const notify = require('gulp-notify');
+const plumber = require('gulp-plumber');
+const source = require('vinyl-source-stream');
+const buffer = require('vinyl-buffer');
+
 
 //a task to compile our sass 
 gulp.task('styles', () => {
@@ -13,20 +21,45 @@ gulp.task('styles', () => {
 });
 
 //a task to compile our javascript 
-gulp.task('scripts', () => {
-	return gulp.src('./dev/scripts/main.js')
-		.pipe(babel({
-			presets: ['es2015']
-		}))
-		.pipe(gulp.dest('./public/scripts/'))
+gulp.task('js', () => {
+    browserify('dev/scripts/main.js', {debug: true})
+        .transform('babelify', {
+            sourceMaps: true,
+            presets: ['es2015']
+        })
+        .bundle()
+        .on('error',notify.onError({
+            message: "Error: <%= error.message %>",
+            title: 'Error in JS 💀'
+        }))
+        .pipe(source('main.js'))
+        .pipe(buffer())
+        .pipe(gulp.dest('public/scripts'))
+        .pipe(reload({stream:true}));
 });
 
-//a task o watch all of my other tasks 
+//a task to reload html on save
+gulp.task('html', () => {
+  return gulp.src('*.html')
+   .pipe(browserSync.reload({
+    stream: true
+   }))
+});
+
+//browser sync
+gulp.task('bs', () => {
+    browserSync.init({
+        server: {
+            baseDir: './'
+        }
+    });
+});
+
+//a task to watch all of my other tasks 
 //to exit out of the watch task use ctl + c
-gulp.task('watch', () => {
-	gulp.watch('./dev/styles/**/*.scss', ['styles']);
-	gulp.watch('.dev/scripts/main.js', ['scripts']);
+gulp.task('default', ['js','bs', 'styles','html'], () => {
+    gulp.watch('dev/**/*.js',['js']);
+    gulp.watch('dev/**/*.scss',['styles']);
+    gulp.watch('*.html', ['html']);
+    gulp.watch('./public/styles/style.css',reload);
 });
-
-//runs our all of our tasks
-gulp.task('default', ['styles', 'scripts', 'watch']);

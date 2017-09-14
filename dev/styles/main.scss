@@ -1,10 +1,20 @@
-@import 'setup';
+@import 'partials/_ionicons-variables.scss';
+/*!
+  Ionicons, v#{$ionicons-version}
+  Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
+  https://twitter.com/benjsperry  https://twitter.com/ionicframework
+  MIT License: https://github.com/driftyco/ionicons
 
-.container {
-	max-width: 900px;
-	margin: 0 auto;
-}
+  Android-style icons originally built by Google’s
+  Material Design Icons: https://github.com/google/material-design-icons
+  used under CC BY http://creativecommons.org/licenses/by/4.0/
+  Modified icons to fit ionicon’s grid from original.
+*/
 
-body {
-	background: pink;
-}
+@import 'partials/_ionicons-font.scss';
+@import 'partials/_ionicons-icons.scss';
+@import 'partials/_reset.scss';
+@import 'partials/_variables.scss';
+@import 'partials/global.scss';
+@import 'partials/_nav.scss';
+
