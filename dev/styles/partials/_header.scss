@@ -1,12 +1,28 @@
 header {
 	@include fontSize(14);
-	height: 100vh;
+	min-height: 840px;
+	position: relative;
+	background: #fdfdfd;
+	z-index: -1;
+	.header__circle {
+		background: $blue;
+		border-radius: 50%;
+		position: absolute;
+		height: 1190px;
+		width: 1190px;
+		bottom: 0;
+		right: -700px;
+		overflow: hidden; 
+		z-index: -1;
+	}
 	nav {
 		padding-top: 58px;
+		// visibility: hidden;
 		ul {
 			display: flex;
+			justify-content: flex-end;
 			list-style: none;
-			padding-left: 3%;
+			padding-right: 3%;
 		}
 		li {
 			padding-right: 40px;
@@ -19,7 +35,7 @@ header {
 
 .header__blurb {
 	h1 {
-		padding-top: 159px;
+		padding-top: 100px;
 		padding-bottom: 16px;
 		color: $headergrey;
 		@include fontSize(30);
@@ -40,15 +56,19 @@ header {
 		line-height: 30px;
 		a {
 			color: $headergrey;
-			@include fontSize(12);
+			@include fontSize(10);
 			font-weight: 500;
 			padding-left: 11px;
 			text-transform: uppercase;
+			position: relative;
 		}
 		i {
 			padding-left: 11px;
 			color: $headergrey;
-			font-size: 30px; 
+			@include fontSize(30); 
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
 		}
 	}
 	.header__resume_blurb {
@@ -56,5 +76,16 @@ header {
 	}
 	.header__contact_blurb {
 		padding-bottom: 55px;
+	}
+
+	.header__socMedia{
+		padding-top: 28px;
+		i {
+			@include fontSize(20);
+		}
+		a:nth-of-type(2) {
+			padding-left: 45px;
+			padding-right: 45px;
+		}
 	}
 }

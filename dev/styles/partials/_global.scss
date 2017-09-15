@@ -14,3 +14,16 @@ a {
 	text-decoration: none;
 	color: $paragrey;
 }
+
+.section__header {
+	color: $headergrey;
+	p {
+		@include fontSize(20);
+		font-style: italic;
+		font-family: 'Libre Baskerville', serif;
+	}
+	h2 {
+		@include fontSize(30);
+		font-weight: 500;
+	}
+}
