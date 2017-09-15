@@ -4,11 +4,10 @@
 	height: 595px;
 	display: flex;
 	justify-content: space-between;
-	flex-direction: row;
 	align-items: flex-start;
 }
 
-.blog__header, .blog__gallery {
+.blog__header, .blog__posts {
 	padding-top: 210px;
 }
 
@@ -17,11 +16,12 @@
 	border-left: solid 1.5px $bordergrey;
 }
 
-.blog__gallery {
-	width: 59%;
+.blog__posts {
+	width: 60%;
 	li {
 		list-style: none;
 		display: flex;
+		justify-content: space-between;
 		border-bottom: solid 1.5px $bordergrey;
 		margin-bottom: 57px;
 		line-height: 24px;
@@ -30,7 +30,7 @@
 			padding-right: 77px;
 		}
 	}
-	a {
-		text-align: right;
-	}
+	// a {
+	// 	float: right;
+	// }
 }
