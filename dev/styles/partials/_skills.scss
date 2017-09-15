@@ -1,0 +1,13 @@
+.skills {
+	height: 418px;
+	background: $background;
+	.skills__wrapper {
+		height: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	i {
+		@include fontSize(70);
+	}
+}

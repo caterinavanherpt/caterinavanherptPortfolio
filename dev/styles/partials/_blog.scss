@@ -1,0 +1,36 @@
+.blog {
+	position: relative;
+	top: -60px;
+	height: 595px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: flex-start;
+}
+
+.blog__header, .blog__gallery {
+	padding-top: 210px;
+}
+
+.blog__header {
+	padding-left: 32px;
+	border-left: solid 1.5px $bordergrey;
+}
+
+.blog__gallery {
+	width: 59%;
+	li {
+		list-style: none;
+		display: flex;
+		border-bottom: solid 1.5px $bordergrey;
+		margin-bottom: 57px;
+		line-height: 24px;
+		text-align: right;
+		p {
+			padding-right: 77px;
+		}
+	}
+	a {
+		text-align: right;
+	}
+}

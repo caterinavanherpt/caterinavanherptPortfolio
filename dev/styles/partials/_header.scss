@@ -2,7 +2,7 @@ header {
 	@include fontSize(14);
 	min-height: 840px;
 	position: relative;
-	background: #fdfdfd;
+	background: $background;
 	z-index: -1;
 	.header__circle {
 		background: $blue;
@@ -42,7 +42,7 @@ header {
 		font-weight: 700;
 	}
 	h2 {
-		font-family: 'Libre Baskerville', serif;
+		font-family: $secondaryFont;
 		@include fontSize(16);
 		padding-bottom: 33px;
 		font-style: italic;

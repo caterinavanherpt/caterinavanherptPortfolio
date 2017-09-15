@@ -1,3 +1,8 @@
+.portfolio {
+	height: 1400px;
+	position: relative;
+	top: -60px;
+}
 .portfolio__header {
 	display: flex;
 	flex-direction: column;
@@ -30,7 +35,7 @@
 	h3 {
 		padding-top: 40px;
 		padding-bottom: 22px;
-		font-family: 'Libre Baskerville', serif;
+		font-family: $secondaryFont;
 		font-style: italic;
 		@include fontSize(24);
 		color: $headergrey;

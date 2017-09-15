@@ -1,11 +1,11 @@
 .wrapper {
-	max-width: 62%;
+	max-width: 75%;
 	margin: 0 auto;
 }
 
 body {
 	font-size: 62.5%;
-	font-family: 'Montserrat', sans-serif;
+	font-family: $mainFont;
 	font-weight: 400;
 	color: $paragrey;
 }
@@ -20,7 +20,7 @@ a {
 	p {
 		@include fontSize(20);
 		font-style: italic;
-		font-family: 'Libre Baskerville', serif;
+		font-family: $secondaryFont;
 	}
 	h2 {
 		@include fontSize(30);
