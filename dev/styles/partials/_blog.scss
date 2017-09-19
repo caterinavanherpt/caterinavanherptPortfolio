@@ -26,7 +26,7 @@
 		list-style: none;
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: center;
 		border-bottom: solid 1.5px $bordergrey;
 		margin-bottom: 57px;
 		line-height: 24px;
@@ -76,6 +76,9 @@
 		i {
 			@include fontSize(20);
 		}
+		li {
+			align-items: flex-start;
+		}
 	}
 }
 
@@ -88,5 +91,20 @@
 		width: 100%;
 		padding-top: 100px;
 		padding-bottom: 150px;
+	}
+}
+
+@include respond-to("small") {
+	.blog__posts {
+		li {
+			flex-direction: column;
+		}
+		p, h3 {
+			padding-left: 0;
+			text-align: left;
+		}
+		p, h3, a {
+			padding-bottom: 3%;
+		}
 	}
 }

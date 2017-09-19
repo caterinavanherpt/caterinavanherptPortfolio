@@ -53,22 +53,31 @@ header {
 		line-height: 24px;
 	}
 	.header__resume_blurb, .header__contact_blurb {
-		line-height: 30px;
+		line-height: 37px;
 		a {
 			color: $headergrey;
 			@include fontSize(10);
 			font-weight: 500;
 			padding-left: 11px;
 			text-transform: uppercase;
-			position: relative;
+			position: absolute;
+			vertical-align: middle;
+			transition: 0.2s;
 		}
 		i {
 			padding-left: 11px;
 			color: $headergrey;
 			@include fontSize(25); 
-			position: absolute;
-			top: 50%;
-			transform: translateY(-50%);
+			position: relative;
+			vertical-align: middle;
+			transition: 0.2s;
+		}
+		a:hover {
+			transform: translateX(2px);
+			color: $salmon;
+			i {
+				color: $salmon;
+			}
 		}
 	}
 	.header__resume_blurb {

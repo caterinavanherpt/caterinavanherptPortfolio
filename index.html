@@ -10,15 +10,15 @@
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
 	<link href="//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css" rel="stylesheet">
 <body>
-	<header class="header">
+	<header class="header" id="about">
 		<div class="header__circle"></div>
 		<nav>
 			<ul>
-				<li class="nav__selected"><a href="">About</a></li>
-				<li><a href="">Portfolio</a></li>
-				<li><a href="">Skills</a></li>
-				<li><a href="">Blog</a></li>
-				<li><a href="">Contact</a></li>
+				<li class="nav__selected"><a href="#about">About</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#blog">Blog</a></li>
+				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 		<div class="header__blurb wrapper">
@@ -28,8 +28,10 @@
 			<p>I have an eye for detail and a love for clean, beautiful design.</p>
 			<p>I am an expert organizer with proven experience in project management.</p>
 			<p>As a lifelong learner, I learn quickly and adapt well to new techniques and challenges.</p>
-			<p class="header__resume_blurb">Want to know more? Check out<a href="">my resume<i class="icon ion-ios-arrow-thin-right"></i></a></p>
-			<p class="header__contact_blurb">Want to chat about how I can help you?<a href="mailto:hello@caterinavanherpt.com">contact me<i class="icon ion-ios-arrow-thin-right"></i></a></p>
+			<div>
+				<p class="header__resume_blurb">Want to know more? Check out<a href="">my resume<i class="icon ion-ios-arrow-thin-right"></i></a></p>
+			</div>
+			<p class="header__contact_blurb">Want to chat about how I can help you?<a href="#contact">contact me<i class="icon ion-ios-arrow-thin-right"></i></a></p>
 			<p>You can also find me here:</p>
 			<div class="header__socMedia">
 				<a href="https://www.linkedin.com/in/caterinavanherpt/" target="_blank"><i class="icon ion-social-linkedin"></i></a>
@@ -39,37 +41,48 @@
 			</div>
 		</div>
 	</header>
-	<section class="portfolio">
+	<section class="portfolio" id="portfolio">
 		<div class="portfolio__header section__header">
 			<p>Take a look</p>
 			<h2>My work</h2>
 		</div>
 		<ul class="portfolio__gallery wrapper">
 			<li class="portfolio__piece">
-				<img src="assets/cappuccinos.png" alt="">
-				<h3>API Application</h3>
-				<p>An application that uses the Teleport API to display information about urban centers based on user input.</p>
+				<a href="caterina_vanherpt_project4/index.html" target="_blank">
+					<img src="assets/cappuccinos.png" alt="" style="max-width: 100%; height: auto;">
+					<h3>API Application</h3>
+					<p>An application that uses the Teleport API to display information about urban centers based on user input. Code is organized using an object app. This project uses JavaScript, jQuery, the Numeral.js library, the Teleport autocomplete widget, CSS Grids and SASS.</p>
+				</a>
 			</li>
 			<li class="portfolio__piece">
-				<img src="assets/growPlantGrow.png" alt="">
-				<h3>React Application</h3>
-				<p>Api, css grids, javascript project</p>
+				<a href="https://plantstuff-e9d9e.firebaseapp.com/" target="_blank">
+					<img src="assets/growPlantGrow.png" alt="" style="max-width: 100%; height: auto;">
+					<h3>React Application</h3>
+					<p>An interactive application that stores and retrieves user inputted care information for their plants. This project uses React, Firebase and Gulp.</p>
+				</a>
 			</li>
 			<li class="portfolio__piece">
-				<img src="assets/badDay.png" alt="">
-				<h3>JavaScript Application</h3>
-				<p>Api, css grids, javascript project</p>
+				<a href="CaterinavanHerpt_JonKowk_Project3/index.html" target="_blank">
+					<img src="assets/badDay.png" alt="" style="max-width: 100%; height: auto;">
+					<h3>JavaScript Application</h3>
+					<p>Partner programmed interactive quiz that gives you some perspective on your bad day. This project uses JavaScript, jQuery and SASS.</p>
+				</a>
 			</li>
 			<li class="portfolio__piece">
 				<a href="https://caterinavanherpt.github.io/HackerYouProject2/" target="_blank">
-					<img src="assets/soundByte.png" alt="">
-					<h3>PSD Conversion</h3>
-					<p>Api, css grids, javascript project</p>
+					<img src="assets/soundByte.png" alt="" style="max-width: 100%; height: auto;">
+					<h3>Responsive Client Website</h3>
+				<!-- 	<div class="skills__wrapper wrapper">
+						<i class="devicon-sass-original"></i>
+						<i class="devicon-javascript-plain"></i>
+						<i class="devicon-jquery-plain-wordmark"></i>
+					</div> -->
+					<p>Provided with a one page PSD conversion. Responsible for mobile design. This project uses HTML, SASS, and JavaScript.</p>
 				</a>
 			</li>
 		</ul>
 	</section>
-	<section class="skills">
+	<section class="skills" id="skills">
 		<div class="skills__wrapper wrapper">
 			<i class="devicon-sass-original"></i>
 			<i class="devicon-gulp-plain"></i>
@@ -83,7 +96,7 @@
 			<!-- <i class="devicon-slack-plain"></i> -->
 			<!-- <i class="devicon-trello-plain-wordmark"></i> -->
 			<!-- <i class="devicon-html5-plain"></i> -->
-	<section class="blog wrapper">
+	<section class="blog wrapper" id="blog">
 		<div class="blog__header section__header">
 			<p>Give it a read</p>
 			<h2>From the blog</h2>
@@ -96,24 +109,25 @@
 					<a href="https://medium.com/@Caterina_vH/connecting-additional-non-gmail-email-accounts-to-inbox-by-gmail-b746e01d8f9d" target="_blank">read more<i class="icon ion-ios-arrow-thin-right"></i></a>
 				</li>
 				<li class="blog__post">
+					<p>More Coming Soon...</p>
+					<!-- <h3>More Coming Soon...</h3> -->
+					<!-- <a href="">read more<i class="icon ion-ios-arrow-thin-right"></i></a> -->
+				</li>
+				<!-- <li class="blog__post">
 					<p>2017</p>
 					<h3>Coming Soon...</h3>
 					<a href="">read more<i class="icon ion-ios-arrow-thin-right"></i></a>
 				</li>
-				<li class="blog__post">
-					<p>2017</p>
-					<h3>Coming Soon...</h3>
-					<a href="">read more<i class="icon ion-ios-arrow-thin-right"></i></a>
-				</li>
-			</ul>
+			</ul> -->
 			<a href="https://medium.com/@Caterina_vH" target="_blank" class="blog__mainLink">all posts from blog<i class="icon ion-ios-arrow-thin-right"></i></a>
 		</div>
 	</section>
-	<section class="contactForm">
+	<section class="contactForm" id="contact">
 		<div class="wrapper contactForm__wrapper">
 			<div class="contactForm__header section__header">
 				<p>Hello there</p>
 				<h2>Get in touch</h2>
+				<a href="mailto:hello@caterinavanherpt.com">hello@caterinavanherpt.com</a>
 			</div>
 			<iframe name="hidden_iframe" id="hidden_iframe">
 			</iframe>
