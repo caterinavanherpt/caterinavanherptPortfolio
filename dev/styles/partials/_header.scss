@@ -2,7 +2,9 @@ header {
 	@include fontSize(14);
 	min-height: 840px;
 	position: relative;
+	// background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(198, 223, 223, 0.6)), url(/assets/hero.jpg);
 	background: $background;
+	// background-size: cover;
 	z-index: 0;
 	overflow: hidden;
 	.header__circle {

@@ -1,7 +1,12 @@
-.blog, .contactForm__wrapper {
+.blog{
+	background: linear-gradient(45deg, rgba(198, 223, 223, 0.9), rgba(255, 255, 255, 0.9)), url(/assets/hero.jpg);
+	background-size: cover;
+}
+
+.blog__wrapper, .contactForm__wrapper {
 	position: relative;
 	top: -60px;
-	height: 595px;
+	height: 530px;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -83,7 +88,7 @@
 }
 
 @include respond-to("medium") {
-	.blog {
+	.blog__wrapper {
 		display: block;
 		height: 100%;
 	}

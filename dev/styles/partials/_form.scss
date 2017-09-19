@@ -1,7 +1,7 @@
 //for general section layout see blog partial
 
 .contactForm {
-	background: $background;
+	background: $backgroundtwo;
 }
 
 #hidden_iframe {
@@ -17,7 +17,7 @@
 		height: 80px;
 	}
 	label {
-		color: $descriptiongrey;
+		color: $paragrey;
 		@include fontSize(14);
 		font-weight: 400;
 	}
@@ -28,10 +28,10 @@
 		background: rgba(198, 223, 223, 0);
 		border-bottom: solid 1px $bordergrey;
 		outline: none;
-		height: 16px;
 		color: $headergrey;
 		@include fontSize(16);
 		font-weight: 500;
+		padding: 2%;
 	}
 	.textarea {
 		resize: none;
@@ -71,7 +71,4 @@
 		width: 100%;
 		padding-top: 100px;
 	}
-	// .contactForm__submit {
-	// 	width: 100%;
-	// }
 }

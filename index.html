@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="public/styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i|Montserrat:400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-	<link href="//cdn.jsdelivr.net/devicons/1.8.0/css/devicons.min.css" rel="stylesheet">
 <body>
 	<header class="header" id="about">
 		<div class="header__circle"></div>
@@ -16,7 +15,6 @@
 			<ul>
 				<li class="nav__selected"><a href="#about">About</a></li>
 				<li><a href="#portfolio">Portfolio</a></li>
-				<li><a href="#skills">Skills</a></li>
 				<li><a href="#blog">Blog</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
@@ -48,78 +46,85 @@
 		</div>
 		<ul class="portfolio__gallery wrapper">
 			<li class="portfolio__piece">
-				<a href="caterina_vanherpt_project4/index.html" target="_blank">
-					<img src="assets/cappuccinos.png" alt="" style="max-width: 100%; height: auto;">
+				<a class="portfolio__livelink" href="caterina_vanherpt_project4/index.html" target="_blank">
+					<img src="assets/cappuccinos.png" alt="">
 					<h3>API Application</h3>
-					<p>An application that uses the Teleport API to display information about urban centers based on user input. Code is organized using an object app. This project uses JavaScript, jQuery, the Numeral.js library, the Teleport autocomplete widget, CSS Grids and SASS.</p>
-				</a>
-			</li>
-			<li class="portfolio__piece">
-				<a href="https://plantstuff-e9d9e.firebaseapp.com/" target="_blank">
-					<img src="assets/growPlantGrow.png" alt="" style="max-width: 100%; height: auto;">
-					<h3>React Application</h3>
-					<p>An interactive application that stores and retrieves user inputted care information for their plants. This project uses React, Firebase and Gulp.</p>
-				</a>
-			</li>
-			<li class="portfolio__piece">
-				<a href="CaterinavanHerpt_JonKowk_Project3/index.html" target="_blank">
-					<img src="assets/badDay.png" alt="" style="max-width: 100%; height: auto;">
-					<h3>JavaScript Application</h3>
-					<p>Partner programmed interactive quiz that gives you some perspective on your bad day. This project uses JavaScript, jQuery and SASS.</p>
-				</a>
-			</li>
-			<li class="portfolio__piece">
-				<a href="https://caterinavanherpt.github.io/HackerYouProject2/" target="_blank">
-					<img src="assets/soundByte.png" alt="" style="max-width: 100%; height: auto;">
-					<h3>Responsive Client Website</h3>
-				<!-- 	<div class="skills__wrapper wrapper">
+					<div class="portfolio__skills">
 						<i class="devicon-sass-original"></i>
 						<i class="devicon-javascript-plain"></i>
 						<i class="devicon-jquery-plain-wordmark"></i>
-					</div> -->
-					<p>Provided with a one page PSD conversion. Responsible for mobile design. This project uses HTML, SASS, and JavaScript.</p>
+					</div>
+					<p>An application that uses the Teleport API to display information about urban centers based on user input. Code is organized using an object app. This project uses JavaScript, jQuery, the Numeral.js library, the Teleport autocomplete widget, CSS Grids and SASS.</p>
+					<a class="portfolio__gitlink" href="https://github.com/caterinavanherpt/HackerYouProject4">View GitHub<i class="icon ion-ios-arrow-thin-right"></i></a>
+				</a>
+			</li>
+			<li class="portfolio__piece">
+				<a class="portfolio__livelink" href="https://plantstuff-e9d9e.firebaseapp.com/" target="_blank">
+					<img src="assets/growPlantGrow.png" alt="">
+					<h3>React Application</h3>
+					<div class="portfolio__skills">
+						<i class="devicon-react-original"></i>
+						<i class="devicon-gulp-plain"></i>
+						<i class="devicon-babel-plain"></i>
+					</div>
+					<p>An interactive application that stores and retrieves user inputted care information for their plants. This project uses React, Firebase and Gulp.</p>
+					<a class="portfolio__gitlink" href="https://github.com/caterinavanherpt/HackerYouProject6">View GitHub<i class="icon ion-ios-arrow-thin-right"></i></a>
+				</a>
+			</li>
+			<li class="portfolio__piece">
+				<a class="portfolio__livelink" href="CaterinavanHerpt_JonKowk_Project3/index.html" target="_blank">
+					<img src="assets/badDay.png" alt="">
+					<h3>JavaScript Application</h3>
+					<div class="portfolio__skills">
+						<i class="devicon-sass-original"></i>
+						<i class="devicon-javascript-plain"></i>
+						<i class="devicon-jquery-plain-wordmark"></i>
+					</div>
+					<p>Partner programmed interactive quiz that gives you some perspective on your bad day. This project uses JavaScript, jQuery and Sass.</p>
+					<a class="portfolio__gitlink" href="https://github.com/caterinavanherpt/HackerYouProject3">View GitHub<i class="icon ion-ios-arrow-thin-right"></i></a>
+				</a>
+			</li>
+			<li class="portfolio__piece">
+				<a class="portfolio__livelink" href="https://caterinavanherpt.github.io/HackerYouProject2/" target="_blank">
+					<img src="assets/soundByte.png" alt="">
+					<h3>Responsive Client Website</h3>
+					<div class="portfolio__skills">
+						<i class="devicon-html5-plain"></i>
+						<i class="devicon-sass-original"></i>
+						<i class="devicon-javascript-plain"></i>
+					</div>
+					<p>Provided with a one page PSD conversion. Responsible for mobile design. This project uses HTML, Sass, and JavaScript.</p>
+					<a class="portfolio__gitlink" href="https://github.com/caterinavanherpt/HackerYouProject2">View GitHub<i class="icon ion-ios-arrow-thin-right"></i></a>
 				</a>
 			</li>
 		</ul>
 	</section>
-	<section class="skills" id="skills">
-		<div class="skills__wrapper wrapper">
-			<i class="devicon-sass-original"></i>
-			<i class="devicon-gulp-plain"></i>
-			<i class="devicon-javascript-plain"></i>
-			<i class="devicon-jquery-plain-wordmark"></i>
-			<i class="devicon-react-original"></i>
-		</div>
-	</section>
-			<!-- <i class="devicon-github-plain"></i> -->
-			<!-- <i class="devicon-css3-plain"></i> -->
-			<!-- <i class="devicon-slack-plain"></i> -->
-			<!-- <i class="devicon-trello-plain-wordmark"></i> -->
-			<!-- <i class="devicon-html5-plain"></i> -->
-	<section class="blog wrapper" id="blog">
-		<div class="blog__header section__header">
-			<p>Give it a read</p>
-			<h2>From the blog</h2>
-		</div>
-		<div class="blog__posts">
-			<ul>
-				<li class="blog__post">
-					<p>July 31</p>
-					<h3>Connecting Additional (Non-Gmail) Email Accounts to Inbox by Gmail</h3>
-					<a href="https://medium.com/@Caterina_vH/connecting-additional-non-gmail-email-accounts-to-inbox-by-gmail-b746e01d8f9d" target="_blank">read more<i class="icon ion-ios-arrow-thin-right"></i></a>
-				</li>
-				<li class="blog__post">
-					<p>More Coming Soon...</p>
-					<!-- <h3>More Coming Soon...</h3> -->
-					<!-- <a href="">read more<i class="icon ion-ios-arrow-thin-right"></i></a> -->
-				</li>
-				<!-- <li class="blog__post">
-					<p>2017</p>
-					<h3>Coming Soon...</h3>
-					<a href="">read more<i class="icon ion-ios-arrow-thin-right"></i></a>
-				</li>
-			</ul> -->
-			<a href="https://medium.com/@Caterina_vH" target="_blank" class="blog__mainLink">all posts from blog<i class="icon ion-ios-arrow-thin-right"></i></a>
+	<section class="blog" id="blog">
+		<div class="blog__wrapper wrapper">
+			<div class="blog__header section__header">
+				<p>Give it a read</p>
+				<h2>From the blog</h2>
+			</div>
+			<div class="blog__posts">
+				<ul>
+					<li class="blog__post">
+						<p>July 31</p>
+						<h3>Connecting Additional (Non-Gmail) Email Accounts to Inbox by Gmail</h3>
+						<a href="https://medium.com/@Caterina_vH/connecting-additional-non-gmail-email-accounts-to-inbox-by-gmail-b746e01d8f9d" target="_blank">read more<i class="icon ion-ios-arrow-thin-right"></i></a>
+					</li>
+					<li class="blog__post">
+						<p>More Coming Soon...</p>
+						<!-- <h3>More Coming Soon...</h3> -->
+						<!-- <a href="">read more<i class="icon ion-ios-arrow-thin-right"></i></a> -->
+					</li>
+					<!-- <li class="blog__post">
+						<p>2017</p>
+						<h3>Coming Soon...</h3>
+						<a href="">read more<i class="icon ion-ios-arrow-thin-right"></i></a>
+					</li>
+				</ul> -->
+				<a href="https://medium.com/@Caterina_vH" target="_blank" class="blog__mainLink">all posts from blog<i class="icon ion-ios-arrow-thin-right"></i></a>
+			</div>
 		</div>
 	</section>
 	<section class="contactForm" id="contact">
@@ -127,7 +132,7 @@
 			<div class="contactForm__header section__header">
 				<p>Hello there</p>
 				<h2>Get in touch</h2>
-				<a href="mailto:hello@caterinavanherpt.com">hello@caterinavanherpt.com</a>
+				<!-- <a href="mailto:hello@caterinavanherpt.com">hello@caterinavanherpt.com</a> -->
 			</div>
 			<iframe name="hidden_iframe" id="hidden_iframe">
 			</iframe>
@@ -143,7 +148,7 @@
 					</li>
 					<li>
 						<label for="entry.178114741">Tell me a little bit about yourself and any questions you have for me.</label>
-						<textarea class="textarea" style="height: 20px;" name="entry.178114741" your message"></textarea>
+						<textarea class="textarea" style="height: 50px;" name="entry.178114741" your message"></textarea>
 					</li>
 					<li class="contactForm__submit">
 						<button>submit<i class="icon ion-ios-arrow-thin-right"></i></button>
