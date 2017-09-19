@@ -48,3 +48,16 @@
 		@include fontSize(14);
 	}
 }
+
+@include respond-to("small") {
+	.portfolio {
+		height: 100%;
+	}
+	.portfolio__header {
+		margin-left: 12.5%;
+		width: 100%;
+	}
+	.portfolio__gallery {
+		column-count: 1;
+	}
+}

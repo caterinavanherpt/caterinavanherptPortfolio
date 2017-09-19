@@ -4,7 +4,7 @@
 }
 
 body {
-	font-size: 62.5%;
+	font-size: 70%;
 	font-family: $mainFont;
 	font-weight: 400;
 	color: $paragrey;
@@ -25,5 +25,11 @@ a {
 	h2 {
 		@include fontSize(30);
 		font-weight: 500;
+	}
+}
+
+@include respond-to("small") {
+	body {
+		font-size: 62.5%;
 	}
 }

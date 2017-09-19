@@ -1,0 +1,70 @@
+//for general section layout see blog partial
+
+.contactForm {
+	background: $background;
+}
+
+#hidden_iframe {
+	display: none;
+}
+
+.contactForm__form {
+	width: 65%;
+	ul {
+		list-style: none;
+	}
+	li {
+		height: 80px;
+	}
+	label {
+		color: $descriptiongrey;
+		@include fontSize(14);
+		font-weight: 400;
+	}
+	input, textarea {
+		width: 100%;
+		display: block;
+		border: none;
+		background: rgba(198, 223, 223, 0);
+		border-bottom: solid 1px $bordergrey;
+		outline: none;
+		height: 16px;
+		color: $headergrey;
+		@include fontSize(16);
+		font-weight: 500;
+	}
+	.textarea {
+		resize: none;
+	}
+	button {
+		color: $headergrey;
+		@include fontSize(12);
+		font-weight: 500;
+		text-transform: uppercase;
+		border: none;
+		background: rgba(198, 223, 223, 0);
+		display: flex;
+		align-items: center;
+		// -webkit-appearance: none;
+		i {
+			@include fontSize(25);
+			color: $headergrey;
+			font-weight: 400;
+			padding-left: 11px;
+		}
+	}
+}
+
+
+@include respond-to("medium") {
+	.contactForm__wrapper {
+		display: block;
+		height: 100%;
+	}
+	.contactForm__form {
+		width: 100%;
+		padding-top: 100px;
+	}
+	.contactForm__submit {
+	}
+}

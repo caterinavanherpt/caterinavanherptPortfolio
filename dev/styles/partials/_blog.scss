@@ -1,4 +1,4 @@
-.blog {
+.blog, .contactForm__wrapper {
 	position: relative;
 	top: -60px;
 	height: 595px;
@@ -7,30 +7,86 @@
 	align-items: flex-start;
 }
 
-.blog__header, .blog__posts {
+.blog__header, .blog__posts, .contactForm__header, .contactForm__form {
 	padding-top: 210px;
 }
 
-.blog__header {
+.blog__posts, .contactForm__form {
+	padding-left: 5%;
+}
+
+.blog__header, .contactForm__header {
 	padding-left: 32px;
 	border-left: solid 1.5px $bordergrey;
 }
 
 .blog__posts {
-	width: 60%;
+	width: 65%;
 	li {
 		list-style: none;
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 		border-bottom: solid 1.5px $bordergrey;
 		margin-bottom: 57px;
 		line-height: 24px;
 		text-align: right;
+		width: 100%;
 		p {
-			padding-right: 77px;
+			color: $descriptiongrey;
+			@include fontSize(12);
+			min-width: 43px;	
+		}
+		h3 {
+			font-family: $secondaryFont;
+			font-style: italic;
+			@include fontSize(16);
+			color: $paragrey;
 		}
 	}
-	// a {
-	// 	float: right;
-	// }
+	li:nth-of-type(3) {
+		margin-bottom: 48px;
+	}
+	a {
+		color: $paragrey;
+		font-weight: 500;
+		@include fontSize(12);
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		min-width: 117px;
+	}
+	i {
+		@include fontSize(25);
+		color: $paragrey;
+		font-weight: 400;
+		padding-left: 11px;
+	}
+	.blog__mainLink {
+		float: right;
+	}
+}
+
+@include respond-to("large") {
+	.blog__posts {
+		h3 {
+			padding-right: 2.5%;
+			padding-left: 2.5%;
+		}
+		i {
+			@include fontSize(20);
+		}
+	}
+}
+
+@include respond-to("medium") {
+	.blog {
+		display: block;
+		height: 100%;
+	}
+	.blog__posts {
+		width: 100%;
+		padding-top: 100px;
+		padding-bottom: 150px;
+	}
 }

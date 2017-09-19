@@ -8,6 +8,21 @@
 		align-items: center;
 	}
 	i {
-		@include fontSize(70);
+		@include fontSize(80);
+	}
+}
+
+@include respond-to("small") {
+	.skills {
+		display: flex;
+		align-items: center;
+		.skills__wrapper {
+			height: auto;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		i {
+			padding: 8%;
+		}
 	}
 }
