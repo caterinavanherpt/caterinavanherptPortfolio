@@ -107,6 +107,7 @@ header {
 	.header__blurb {
 		h1 {
 			@include fontSize(30);
+			max-width: 240px;
 		}
 		h2 {
 			padding-bottom: 23px;
@@ -119,11 +120,11 @@ header {
 			line-height: 18px;
 		}
 		.header__resume_blurb {
-			max-width: 200px;
+			min-width: 200px;
 		}
 		.header__contact_blurb {
 			padding-top: 3%;
-			max-width: 210px;
+			min-width: 210px;
 		}
 		.header__socMedia{
 			padding-top: 8px;
