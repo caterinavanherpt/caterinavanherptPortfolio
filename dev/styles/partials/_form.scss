@@ -2,6 +2,7 @@
 
 .contactForm {
 	background: $backgroundtwo;
+	padding-bottom: 60px;
 }
 
 #hidden_iframe {
@@ -14,7 +15,7 @@
 		list-style: none;
 	}
 	li {
-		height: 80px;
+		padding: 2%;
 	}
 	label {
 		color: $paragrey;
@@ -32,6 +33,7 @@
 		@include fontSize(16);
 		font-weight: 500;
 		padding: 2%;
+		height: 50px;
 	}
 	.textarea {
 		resize: none;
@@ -59,12 +61,15 @@
 }
 
 @include respond-to("medium") {
+	.contactForm {
+		padding-bottom: 0;
+	}
 	.contactForm__wrapper {
 		display: block;
 		height: 100%;
 	}
 	.contactForm__form {
 		width: 100%;
-		padding-top: 100px;
+		padding-top: 40px;
 	}
 }

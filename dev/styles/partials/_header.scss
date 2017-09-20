@@ -4,11 +4,11 @@ header {
 	position: relative;
 	background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(198, 223, 223, 0.6)), url(/assets/hero.jpg);
 	background-size: cover;
-	// z-index: 0;
-	// overflow: hidden;
+	background-position: center;
 	nav {
 		animation: fadein 3s;
 		padding-top: 58px;
+		padding-right: 10px;
 		ul {
 			display: flex;
 			justify-content: flex-end;
@@ -20,9 +20,7 @@ header {
 		}
 		li:hover {
 			transform: scale(1.05);
-			a {
-				color: $salmon;
-			}
+			color: $salmon;
 		}
 		a {
 			padding: 10px;
@@ -90,11 +88,17 @@ header {
 	}
 }
 
+@include respond-to("medium") {
+	.link__arrow {
+		position: static;
+	}
+}
+
 @include respond-to("small") {
 	header {
-		.header__circle {
-			right: -975px;		
-		}
+		background: linear-gradient(45deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url(/assets/hero.jpg);
+		background-size: cover;
+		background-position: center;
 		nav {
 			display: none;
 		}
@@ -104,14 +108,22 @@ header {
 		h1 {
 			@include fontSize(30);
 		}
+		h2 {
+			padding-bottom: 23px;
+		}
 		p {
-			padding-bottom: 3%;
+			line-height: 20px;
+			padding-bottom: 5%;
 		}
 		.header__resume_blurb, .header__contact_blurb {
 			line-height: 18px;
 		}
+		.header__resume_blurb {
+			max-width: 200px;
+		}
 		.header__contact_blurb {
 			padding-top: 3%;
+			max-width: 210px;
 		}
 		.header__socMedia{
 			padding-top: 8px;

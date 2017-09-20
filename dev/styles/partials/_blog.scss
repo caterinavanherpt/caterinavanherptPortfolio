@@ -5,7 +5,6 @@
 
 .blog__wrapper, .contactForm__wrapper {
 	top: -60px;
-	height: 530px;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
@@ -14,10 +13,6 @@
 
 .blog__header, .blog__posts, .contactForm__header, .contactForm__form {
 	padding-top: 210px;
-}
-
-.blog__posts, .contactForm__form {
-	padding-left: 5%;
 }
 
 .blog__header, .contactForm__header {
@@ -38,15 +33,17 @@
 		text-align: right;
 		width: 100%;
 		p {
-			color: $descriptiongrey;
+			color: $paragrey;
 			@include fontSize(12);
 			min-width: 43px;	
 		}
 		h3 {
 			font-family: $secondaryFont;
 			font-style: italic;
-			@include fontSize(16);
-			color: $paragrey;
+			@include fontSize(20);
+			color: $headergrey;
+			padding-right: 10px;
+			padding-left: 10px;
 		}
 	}
 	.blog__post:nth-of-type(3) {
@@ -86,6 +83,9 @@
 }
 
 @include respond-to("medium") {
+	.blog{
+		background: $blue;
+	}
 	.blog__wrapper {
 		display: block;
 		height: 100%;
@@ -95,10 +95,15 @@
 		padding-top: 100px;
 		padding-bottom: 150px;
 	}
+	.blog__posts, .contactForm__form {
+	padding-left: 5%;
+}
 }
 
 @include respond-to("small") {
 	.blog__posts {
+		padding-top: 40px;
+		padding-bottom: 55px;
 		li {
 			flex-direction: column;
 		}
@@ -109,5 +114,12 @@
 		p, h3, a {
 			padding-bottom: 3%;
 		}
+		.blog__post {
+			align-items: left;
+			text-align: left;
+		}
+	}
+	.blog__header, .contactForm__header{
+		padding-top: 150px;
 	}
 }
