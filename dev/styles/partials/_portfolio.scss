@@ -12,7 +12,23 @@
 	height: 270px;
 	border-left: solid 1.5px $bordergrey;
 	padding-left: 31px;
+	// position: relative;
 }
+
+// .portfolio__header:after {
+// 	position: absolute;
+// 	content: "";
+// 	left: 0;
+// 	top: 0;
+// 	width: 1.5px;
+// 	height: 0;
+// 	background-color: $bordergrey;
+// 	transition: height 0.2s; 
+// }
+
+// .portfolio__header:hover:after {
+// 	height: 100%;
+// }
 
 .portfolio__gallery {
 	column-count: 2;
@@ -44,33 +60,47 @@
 .portfolio__piece {
 	text-align: left;
 	display: inline-block;
+	margin-top: 20px;
 	padding-bottom: 100px;
+	transition: all 0.2s ease-in; 
+	position: relative;
 	h3, .portfolio__skills, p, .portfolio__gitlink {
 		padding-left: 30px;
 	}
-	.portfolio__gitlink {
-		color: $headergrey;
-		@include fontSize(12);
-		font-weight: 500;
-		text-transform: uppercase;
-		position: absolute;
-		vertical-align: middle;
+	h3 {
 		transition: 0.2s;
+	}
+	.portfolio__piece--border {
+		transition: 0.2s;
+	}
+	.portfolio__gitlink {
+		@include fontSize(12);
 		i {
-			padding-left: 11px;
-			color: $headergrey;
 			@include fontSize(25); 
-			position: relative;
-			vertical-align: middle;
-			transition: 0.2s;
 		}
 	}
-	.portfolio__gitlink:hover {
-		transform: translateX(2px);
-		color: $salmon;
-		i {
-			color: $salmon;
-		}
+}
+
+.portfolio__gitlink:hover {
+	color: $teal;
+	i {
+		color: $teal;
+	}
+}
+
+
+.portfolio__piece:hover {
+	transform: scale(1.03);
+	.portfolio__piece--border {
+		position: absolute;
+		top: 5px;
+		left: 5px;
+		right: 5px;
+		bottom: 40px;
+		border: 1px solid $teal;
+	}
+	h3 {
+		color: $teal;
 	}
 }
 

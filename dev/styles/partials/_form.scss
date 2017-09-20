@@ -37,30 +37,26 @@
 		resize: none;
 	}
 	button {
-		color: $headergrey;
 		@include fontSize(12);
-		font-weight: 500;
-		text-transform: uppercase;
 		border: none;
 		background: rgba(198, 223, 223, 0);
-		display: flex;
-		align-items: center;
-		// -webkit-appearance: none;
 		i {
 			@include fontSize(25);
-			color: $headergrey;
 			font-weight: 400;
-			padding-left: 11px;
 		}
 	}
-
 	.contactForm__header{
 		p {
 			@include fontSize(18);
 		}
 	}
+	button:hover {
+		color: $teal;
+		i {
+			color: $teal;
+		}
+	}
 }
-
 
 @include respond-to("medium") {
 	.contactForm__wrapper {

@@ -21,19 +21,37 @@ footer {
 .footer__contact a {
 	display: flex;
 	align-items: center;
+	transition: 0.2s;
 	i {
 		padding-left: 56px;
 		padding-right: 35px;
 		@include fontSize(45);
+		transition: 0.2s;
 	}
 	p {
 		@include fontSize(18);
 	}
 }
 
+.footer__contact a:hover {
+	transform: translateX(2px);
+	color: $salmon;
+	i {
+		color: $salmon;
+	}
+}
+
 .footer__socMedia a {
 	padding: 17.5px;
+	i {
+		transition: all 0.2s ease-in;
+	}
 }
+
+.footer__socMedia i:hover {
+	color: $salmon;
+}
+
 .footer__credit {
 	padding-right: 56px;
 	@include fontSize(15);

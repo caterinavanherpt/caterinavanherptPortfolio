@@ -4,12 +4,12 @@
 }
 
 .blog__wrapper, .contactForm__wrapper {
-	position: relative;
 	top: -60px;
 	height: 530px;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	position: relative;
 }
 
 .blog__header, .blog__posts, .contactForm__header, .contactForm__form {
@@ -27,7 +27,7 @@
 
 .blog__posts {
 	width: 65%;
-	li {
+	.blog__post {
 		list-style: none;
 		display: flex;
 		justify-content: space-between;
@@ -49,26 +49,24 @@
 			color: $paragrey;
 		}
 	}
-	li:nth-of-type(3) {
+	.blog__post:nth-of-type(3) {
 		margin-bottom: 48px;
 	}
 	a {
 		color: $paragrey;
-		font-weight: 500;
 		@include fontSize(12);
-		text-transform: uppercase;
-		display: flex;
-		align-items: center;
 		min-width: 117px;
 	}
 	i {
 		@include fontSize(25);
 		color: $paragrey;
 		font-weight: 400;
-		padding-left: 11px;
 	}
 	.blog__mainLink {
 		float: right;
+	}
+	.link__arrow {
+		position: relative;
 	}
 }
 

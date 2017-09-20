@@ -2,22 +2,12 @@ header {
 	@include fontSize(14);
 	min-height: 840px;
 	position: relative;
-	// background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(198, 223, 223, 0.6)), url(/assets/hero.jpg);
-	background: $background;
-	// background-size: cover;
-	z-index: 0;
-	overflow: hidden;
-	.header__circle {
-		background: $blue;
-		border-radius: 50%;
-		position: absolute;
-		height: 1190px;
-		width: 1190px;
-		bottom: 0;
-		right: -700px;
-		z-index: -1;
-	}
+	background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(198, 223, 223, 0.6)), url(/assets/hero.jpg);
+	background-size: cover;
+	// z-index: 0;
+	// overflow: hidden;
 	nav {
+		animation: fadein 3s;
 		padding-top: 58px;
 		ul {
 			display: flex;
@@ -25,10 +15,17 @@ header {
 			list-style: none;
 		}
 		li {
-			padding-right: 35px;
+			padding-right: 25px;
+			transition: all 0.2s ease-in;
 		}
-		a:hover {
-			// color: #26B5AD;
+		li:hover {
+			transform: scale(1.05);
+			a {
+				color: $salmon;
+			}
+		}
+		a {
+			padding: 10px;
 		}
 		.nav__selected {
 			font-weight: 700;
@@ -37,6 +34,7 @@ header {
 }
 
 .header__blurb {
+	animation: fadein 3s;
 	h1 {
 		padding-top: 50px;
 		padding-bottom: 16px;
@@ -57,29 +55,11 @@ header {
 	.header__resume_blurb, .header__contact_blurb {
 		line-height: 37px;
 		a {
-			color: $headergrey;
 			@include fontSize(10);
-			font-weight: 500;
 			padding-left: 11px;
-			text-transform: uppercase;
-			position: absolute;
-			vertical-align: middle;
-			transition: 0.2s;
 		}
 		i {
-			padding-left: 11px;
-			color: $headergrey;
 			@include fontSize(25); 
-			position: relative;
-			vertical-align: middle;
-			transition: 0.2s;
-		}
-		a:hover {
-			transform: translateX(2px);
-			color: $salmon;
-			i {
-				color: $salmon;
-			}
 		}
 	}
 	.header__resume_blurb {
@@ -94,8 +74,11 @@ header {
 		i {
 			@include fontSize(20);
 		}
+		a {
+			transition: all 0.2s ease-in;
+		}
 		a:hover {
-			// color: $orange;
+			color: $salmon;
 		}
 		a:nth-of-type(2) {
 			padding-left: 35px;
