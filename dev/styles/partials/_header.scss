@@ -1,8 +1,8 @@
 header {
-	@include fontSize(14);
+	@include fontSize(16);
 	min-height: 840px;
 	position: relative;
-	background: linear-gradient(45deg, rgba(255, 255, 255, 0.9), rgba(198, 223, 223, 0.6)), url(/assets/hero.jpg);
+	background: linear-gradient(45deg, rgba(198, 223, 223, 0.9), rgba(198, 223, 223, 0.9), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4)), url(/assets/hero.jpg);
 	background-size: cover;
 	background-position: center;
 	nav {
@@ -96,6 +96,7 @@ header {
 
 @include respond-to("small") {
 	header {
+		@include fontSize(15);
 		background: linear-gradient(45deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url(/assets/hero.jpg);
 		background-size: cover;
 		background-position: center;
