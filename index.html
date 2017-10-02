@@ -4,14 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta property="og:image" content="assets/hero.jpg"/>
+	<meta property="og:image" content="http://www.caterinavanherpt.com/assets/websiteScreenshot.png"/>
 	<meta property="og:description" content="Hello! I'm Caterina, a web developer based in Toronto. I have an eye for detail and a love for clean, beautiful design..."/>
 	<title>Caterina van Herpt</title>
 	<link rel="stylesheet" href="public/styles/style.css">
-	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i|Montserrat:400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Poiret+One|" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
-	<!-- favicon by Luboš Volkov from https://thenounproject.com/search/?q=letter%20c&i=20828 -->
-	<link type="image/png" href="assets/favicon.png" rel="icon">
+</head>
 <body>
 	<header class="header" id="about">
  		<nav>
@@ -25,13 +24,8 @@
 		<div class="header__blurb wrapper">
 			<h1>Caterina van Herpt</h1>
 			<h2>Web Developer</h2>
-			<p>Hello! I'm Caterina, a web developer based in Toronto.</p>
-			<p>I have an eye for detail and a love for clean, beautiful design.</p>
-			<p>I'm an expert organizer with proven experience in project management.</p>
-			<p>With my passion for knowledge, I adapt well to new techniques and challenges.</p>
-			<div>
-				<p class="header__resume_blurb">Want to know more? Check out<a class="link__arrow" href="documents/resume.pdf" target="_blank">my resume<i class="icon ion-ios-arrow-thin-right"></i></a></p>
-			</div>
+			<p>Hello! I'm Caterina, a web developer based in Toronto. I have an eye for detail and a love for clean, beautiful design. I'm an expert organizer with proven experience in project management. With my passion for knowledge, I adapt well to new techniques and challenges.</p>
+			<p class="header__resume_blurb">Want to know more? Check out<a class="link__arrow" href="documents/resume.pdf" target="_blank">my resume<i class="icon ion-ios-arrow-thin-right"></i></a></p>
 			<p class="header__contact_blurb">Want to chat about how I can help you?<a class="link__arrow" href="#contact">contact me<i class="icon ion-ios-arrow-thin-right"></i></a></p>
 			<p>You can also find me here:</p>
 			<div class="header__socMedia">
@@ -49,7 +43,6 @@
 		</div>
 		<ul class="portfolio__gallery wrapper">
 			<li class="portfolio__piece">
-				<div class="portfolio__piece--border"></div>
 				<a class="portfolio__livelink" href="cappuccinos/index.html" target="_blank">
 					<img src="assets/cappuccinos.png" alt="">
 					<h3>Cappuccinos</h3>
@@ -58,14 +51,15 @@
 						<i class="devicon-javascript-plain"></i>
 						<i class="devicon-jquery-plain-wordmark"></i>
 					</div>
-					<p>An API application that uses the Teleport API to display information about urban centers based on user input. Code is organized using an object app. This project uses JavaScript, jQuery, the Numeral.js library, the Teleport autocomplete widget, CSS Grids and SASS.</p>
+					<p class="project__description">An API application that uses the Teleport API to display information about urban centers based on user input. Code is organized using an object app. This project uses JavaScript, jQuery, the Numeral.js library, the Teleport autocomplete widget, CSS Grids and SASS.</p>
+				<div class="project__link">
 					<a class="portfolio__viewlivelink link__arrow" href="cappuccinos/index.html" target="_blank">view live<i class="icon ion-ios-arrow-thin-right"></i></a>
 					<a class="portfolio__gitlink link__arrow" href="https://github.com/caterinavanherpt/HackerYouProject4" target="_blank">View GitHub<i class="icon ion-ios-arrow-thin-right"></i></a>
+				</div>
 				</a>
 			</li>
 			<li class="portfolio__piece">
-				<div class="portfolio__piece--border"></div>
-				<a class="portfolio__livelink" href="http://www.grow-plant-grow.com" target="_blank">
+					<a class="portfolio__livelink" href="http://www.grow-plant-grow.com" target="_blank">
 					<img src="assets/growPlantGrow.png" alt="">
 					<h3>Grow Plant Grow</h3>
 					<div class="portfolio__skills">
@@ -73,14 +67,15 @@
 						<i class="devicon-gulp-plain"></i>
 						<i class="devicon-babel-plain"></i>
 					</div>
-					<p>An interactive react application that stores and retrieves user inputted care information for their plants. This project uses React, Firebase and Gulp.</p>
-					<a class="portfolio__viewlivelink link__arrow" href="http://www.grow-plant-grow.com" target="_blank">view live<i class="icon ion-ios-arrow-thin-right"></i></a>
-					<a class="portfolio__gitlink link__arrow" href="https://github.com/caterinavanherpt/HackerYouProject6" target="_blank">View GitHub<i class="icon ion-ios-arrow-thin-right"></i></a>
+					<p class="project__description">An interactive react application that stores and retrieves user inputted care information for their plants. This project uses React, Firebase and Gulp.</p>
+					<div class="project__link">
+						<a class="portfolio__viewlivelink link__arrow" href="http://www.grow-plant-grow.com" target="_blank">view live<i class="icon ion-ios-arrow-thin-right"></i></a>
+						<a class="portfolio__gitlink link__arrow" href="https://github.com/caterinavanherpt/HackerYouProject6" target="_blank">View GitHub<i class="icon ion-ios-arrow-thin-right"></i></a>
+					</div>
 				</a>
 			</li>
 			<li class="portfolio__piece">
-				<div class="portfolio__piece--border"></div>
-				<a class="portfolio__livelink" href="badday/index.html" target="_blank">
+					<a class="portfolio__livelink" href="badday/index.html" target="_blank">
 					<img src="assets/badDay.png" alt="">
 					<h3>Bad Day</h3>
 					<div class="portfolio__skills">
@@ -88,25 +83,28 @@
 						<i class="devicon-javascript-plain"></i>
 						<i class="devicon-jquery-plain-wordmark"></i>
 					</div>
-					<p>Partner programmed interactive quiz that gives you some perspective on your bad day. This project uses JavaScript, jQuery and Sass.</p>
-					<a class="portfolio__viewlivelink link__arrow" href="badday/index.html" target="_blank">view live<i class="icon ion-ios-arrow-thin-right"></i></a>
-					<a class="portfolio__gitlink link__arrow" href="https://github.com/caterinavanherpt/HackerYouProject3" target="_blank">View GitHub<i class="icon ion-ios-arrow-thin-right"></i></a>
+					<p class="project__description">Partner programmed interactive quiz that gives you some perspective on your bad day. This project uses JavaScript, jQuery and Sass.</p>
+					<div class="project__link">
+						<a class="portfolio__viewlivelink link__arrow" href="badday/index.html" target="_blank">view live<i class="icon ion-ios-arrow-thin-right"></i></a>
+						<a class="portfolio__gitlink link__arrow" href="https://github.com/caterinavanherpt/HackerYouProject3" target="_blank">View GitHub<i class="icon ion-ios-arrow-thin-right"></i></a>
+					</div>
 				</a>
 			</li>
 			<li class="portfolio__piece">
-				<div class="portfolio__piece--border"></div>
 				<a class="portfolio__livelink" href="https://caterinavanherpt.github.io/HackerYouProject2/" target="_blank">
 					<img src="assets/soundByte.png" alt="">
 					<h3>SoundByte</h3>
-					<div class="portfolio__skills">
-						<i class="devicon-html5-plain"></i>
-						<i class="devicon-sass-original"></i>
-						<i class="devicon-javascript-plain"></i>
-					</div>
-					<p>Provided with a one page PSD client website design. Responsible for conversion of PSD and mobile design. This project uses HTML, Sass, and JavaScript.</p>
+				</a>
+				<div class="portfolio__skills">
+					<i class="devicon-html5-plain"></i>
+					<i class="devicon-sass-original"></i>
+					<i class="devicon-javascript-plain"></i>
+				</div>
+				<p class="project__description">Provided with a one page PSD client website design. Responsible for conversion of PSD and mobile design. This project uses HTML, Sass, and JavaScript.</p>
+				<div class="project__link">
 					<a class="portfolio__viewlivelink link__arrow" href="https://caterinavanherpt.github.io/HackerYouProject2/" target="_blank">view live<i class="icon ion-ios-arrow-thin-right"></i></a>
 					<a class="portfolio__gitlink link__arrow" href="https://github.com/caterinavanherpt/HackerYouProject2" target="_blank">View GitHub<i class="icon ion-ios-arrow-thin-right"></i></a>
-				</a>
+				</div>
 			</li>
 		</ul>
 	</section>
@@ -124,15 +122,15 @@
 						<a class="link__arrow" href="https://medium.com/@Caterina_vH/connecting-additional-non-gmail-email-accounts-to-inbox-by-gmail-b746e01d8f9d" target="_blank">read more<i class="icon ion-ios-arrow-thin-right"></i></a>
 					</li>
 					<li class="blog__post">
+						<p>Sept 28</p>
+						<h3>JavaScript 30 Challenge — Day 2</h3>
+						<a class ="link__arrow" href="https://medium.com/@Caterina_vH/javascript-30-challenge-day-2-bd19bbcd941f" target="_blank">read more<i class="icon ion-ios-arrow-thin-right"></i></a>
+					</li>
+					<li class="blog__post">
 						<p>More Coming Soon...</p>
 						<!-- <h3>More Coming Soon...</h3>
 						<!-- <a href="">read more<i class="icon ion-ios-arrow-thin-right"></i></a> -->
 					</li>
-<!-- 					<li class="blog__post">
-						<p>2017</p>
-						<h3>Coming Soon...</h3>
-						<a href="">read more<i class="icon ion-ios-arrow-thin-right"></i></a>
-					</li> -->
 				</ul>
 				<a class="blog__mainLink link__arrow" href="https://medium.com/@Caterina_vH" target="_blank">all posts from blog<i class="icon ion-ios-arrow-thin-right"></i></a>
 			</div>

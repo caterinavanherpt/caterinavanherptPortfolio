@@ -1,14 +1,19 @@
+
+
 header {
 	@include fontSize(16);
 	min-height: 840px;
 	position: relative;
-	background: linear-gradient(45deg, rgba(198, 223, 223, 0.9), rgba(198, 223, 223, 0.9), rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.4)), url(/assets/hero.jpg);
+	background:linear-gradient(480deg, rgba(205, 231, 231, 0), rgba(242, 251, 255, 0.81), rgba(235, 246, 249, 0.85), rgba(233, 250, 251, 0.66), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(/assets/hero.jpg);
 	background-size: cover;
 	background-position: center;
 	nav {
 		animation: fadein 3s;
 		padding-top: 58px;
 		padding-right: 10px;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+		font-size: 0.8em;
 		ul {
 			display: flex;
 			justify-content: flex-end;
@@ -35,20 +40,25 @@ header {
 	animation: fadein 3s;
 	h1 {
 		padding-top: 50px;
-		padding-bottom: 16px;
+		padding-bottom: 10px;
 		color: $headergrey;
-		@include fontSize(40);
+		@include fontSize(48);
 		font-weight: 500;
+		font-family: $secondaryFont;
 	}
 	h2 {
-		font-family: $secondaryFont;
-		@include fontSize(16);
+		font-family: $mainFont;
+		@include fontSize(11);
 		padding-bottom: 33px;
-		font-style: italic;
 		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		padding-left: 10px
 	}
 	p {
+		width: 525px;
 		line-height: 24px;
+		padding-left: 10px;
 	}
 	.header__resume_blurb, .header__contact_blurb {
 		line-height: 37px;
@@ -69,6 +79,7 @@ header {
 
 	.header__socMedia{
 		padding-top: 28px;
+		padding-left: 10px;
 		i {
 			@include fontSize(20);
 		}
@@ -89,6 +100,19 @@ header {
 }
 
 @include respond-to("medium") {
+	header {
+		background: linear-gradient(480deg, rgba(205, 231, 231, 0), rgba(242, 251, 255, 0.81), rgba(235, 246, 249, 0.85), rgba(233, 250, 251, 0.72), rgba(255, 255, 255, 0.46), rgba(255, 255, 255, 0)), url(/assets/hero.jpg);
+		background-size: cover;
+		background-position: center;
+	}
+	.header__blurb {
+		h1 {
+			@include fontSize(38);
+		}
+		p {
+			width: 100%;
+		}
+	}
 	.link__arrow {
 		position: static;
 	}
@@ -96,7 +120,7 @@ header {
 
 @include respond-to("small") {
 	header {
-		@include fontSize(15);
+		@include fontSize(13);
 		background: linear-gradient(45deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.8)), url(/assets/hero.jpg);
 		background-size: cover;
 		background-position: center;
@@ -107,7 +131,7 @@ header {
 
 	.header__blurb {
 		h1 {
-			@include fontSize(30);
+			@include fontSize(37);
 			max-width: 240px;
 		}
 		h2 {

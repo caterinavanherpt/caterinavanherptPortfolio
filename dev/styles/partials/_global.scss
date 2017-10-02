@@ -24,7 +24,7 @@ a {
 	color: $headergrey;
 	p {
 		@include fontSize(20);
-		font-style: italic;
+		// font-style: italic;
 		font-family: $secondaryFont;
 	}
 	h2 {
@@ -34,8 +34,8 @@ a {
 }
 
 .link__arrow {
-	color: $headergrey;
 	font-weight: 500;
+	letter-spacing: 2px;
 	text-transform: uppercase;
 	position: absolute;
 	vertical-align: middle;

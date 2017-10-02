@@ -42,9 +42,11 @@
 		@include fontSize(12);
 		border: none;
 		background: rgba(198, 223, 223, 0);
+		color: $paragrey;
 		i {
 			@include fontSize(25);
 			font-weight: 400;
+			color: $paragrey;
 		}
 	}
 	.contactForm__header{
@@ -71,5 +73,11 @@
 	.contactForm__form {
 		width: 100%;
 		padding-top: 40px;
+	}
+}
+
+@include respond-to("small") {
+	.contactForm__form {
+		padding-left: 0;
 	}
 }
