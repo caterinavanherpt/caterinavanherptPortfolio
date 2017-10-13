@@ -58,6 +58,9 @@
 		line-height: 24px;
 		@include fontSize(14);
 		padding-bottom: 11px;
+		.jonlink:hover {
+			text-decoration: underline;
+		}
 	}
 
 	.portfolio__gitlink:hover, .portfolio__viewlivelink:hover {
@@ -81,6 +84,9 @@
 .portfolio__piece:hover {
 	transform: scale(1.03);
 	h3 {
+		color: $teal;
+	}
+	.jonlink {
 		color: $teal;
 	}
 }
